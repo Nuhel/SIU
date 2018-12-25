@@ -288,7 +288,7 @@ $thisDiscipline=base64_decode($discipline);
         $StudentUser->s_id= $current_S_id->id;
         $StudentUser->email=$personal_email;
         $StudentUser->password= Hash::make($registration_number);
-        $StudentUser->updateRequest= '133';
+        $StudentUser->updateRequest= '2018-12-25 13:35:16';
         $StudentUser->status='1';
         $StudentUser->save();
         $notification = array(

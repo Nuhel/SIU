@@ -19,7 +19,7 @@ class CreateStudentusersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken(); 
-            $table->timestamp('updateRequest')->nullable();
+            $table->timestamp('updateRequest')->nullable(true);
             $table->integer('status');
             $table->timestamps();
         });
