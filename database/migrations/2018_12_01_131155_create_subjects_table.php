@@ -13,7 +13,7 @@ class CreateSubjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Subjects', function (Blueprint $table) {
+        Schema::create('subjects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('course_title')->nullable(false);
             $table->string('course_code')->nullable(false);
@@ -32,6 +32,6 @@ class CreateSubjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Subjects');
+        Schema::dropIfExists('subjects');
     }
 }
