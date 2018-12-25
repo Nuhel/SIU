@@ -1,0 +1,14 @@
+/* your styles go here */
+
+
+.errorCustom{
+color: red;
+}
+
+.form-text-error{
+    color: red !important;
+}
+.side_form{
+    padding-left: 0;
+    padding-right: 0;
+}
