@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-
+<title>@yield('pageTitle') SIU | Graduate</title>
 
 
 @push('css')
@@ -14,7 +14,6 @@
             <div class="card mr_b_50 mr_t_50">
                 <div class="custom_card_syllabus">
                     <div class="inner_main">
-
 
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
@@ -36,8 +35,6 @@
                                         <hr>
                                         <p>The minimum requirement for eligibility to seek admission into the MBA program is a Bachelor Degree of its equivalent in any field including business, engineering, agriculture or medicine with 5(five) points (with no more than one 3rd division in any public examination) calculated as the follows.</p>
                                         <br>
-
-
 
                                         <table class="table-responsive table-hover table-bordered">
                                             <tbody>

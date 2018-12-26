@@ -57,6 +57,73 @@
     <link rel="stylesheet" href="{{asset('siu/css/nstyle.css')}}">
     <link rel="stylesheet" href="{{asset('siu/css/responsive.css')}}">
     <link rel="stylesheet" href="{{asset('siu/css/selectric.css')}}">
+
+
+
+
+
+{{-- ==============new nav intigration======================= --}}
+
+
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('siu/navfile/demo.css') }}">
+        <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.0/jquery.mmenu.all.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.0/jquery.mmenu.all.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('siu/navfile/jquery.mhead.css') }}">
+        <script type="text/javascript" src="{{ asset('siu/navfile/jquery.mhead.js') }}"></script>
+
+        <style type="text/css">
+            .mh-head {
+                background: #00a0b6;
+                color: #fff;
+            }
+            .mh-text {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .mh-head .mh-form .fa {
+                color: #4bb5ef;
+            }
+        </style>
+
+        <script type="text/javascript">
+            $(function() {
+
+                //  create the menus
+                $('#menu').mmenu();
+                $('#shoppingbag').mmenu({
+                    extensions: [ 'position-right' ],
+                    navbar: {
+                        title: 'Shoppingbag'
+                    }
+                });
+
+                //  fire the plugin
+                $('.mh-head.first').mhead({
+                    scroll: {
+                        hide: 200
+                    }
+                });
+                $('.mh-head.second').mhead({
+                    scroll: false
+                });
+
+                //  for demo only
+                $('a[href^="#/"]').click(function() {
+                    alert( 'Thank you for clicking, but that\'s a demo link.' );
+                    return;
+                })
+            });
+        </script>
+
+
+{{-- ====================end intigration=================== --}}
+
+
+
+
     @stack('css')
 
 </head>
@@ -64,8 +131,10 @@
 <body>
 <!-- =========NAV SECTION STARTED======= -->
 
-<div class="header_top">
+<!-- navbar started -->
 
+
+<div class="header_top">
     <div class="nav_right_search">
         <form action="">
             <ul>
@@ -79,16 +148,6 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu jump_to_dropdown" aria-labelledby="dropdownMenu1">
-                        {{--<li class="hvr-forward"><a href="#">All Notice<div class="ripple-container"></div></a></li>--}}
-                        {{--<li class="hvr-forward"><a href="#">All Events</a></li>--}}
-                        {{--<li class="hvr-forward"><a href="#">Library</a></li>--}}
-                        {{--<li class="hvr-forward"><a href="#">CSE Society</a></li>--}}
-                        {{--<li class="hvr-forward"><a href="#">Syllabus</a></li>--}}
-                        {{--<li class="hvr-forward"><a href="#">Schools</a></li>--}}
-                        {{--<li class="hvr-forward"><a href="#">Alumni</a></li>--}}
-
-
-
                         <li class="mouse_on"><a href="#">All Notice<div class="ripple-container"></div></a></li>
                         <li class="mouse_on"><a href="#">All Events</a></li>
                         <li class="mouse_on"><a href="#">Library</a></li>
@@ -96,8 +155,6 @@
                         <li class="mouse_on"><a href="#">Syllabus</a></li>
                         <li class="mouse_on"><a href="#">Schools</a></li>
                         <li class="mouse_on"><a href="#">Alumni</a></li>
-
-
                     </ul>
                 </div>
 
@@ -110,7 +167,6 @@
             </ul>
         </form>
     </div>
-
 
     <div class="header_top_inner">
         <div class="logoCenter">
@@ -128,503 +184,406 @@
     </div>
 </div>
 <div class="hr_line"></div>
-<header class="cd-main-header"  id="sticky_nav">
-
-    <ul class="cd-header-buttons">
-        <li><a class="cd-search-trigger" href="#cd-search"><span></span></a></li>
-        <li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
-    </ul> <!-- cd-header-buttons -->
-</header>
-
-<main class="cd-main-content">
-    <!-- your content here -->
-
-    <div class="cd-overlay"></div>
-</main>
-
-<nav class="cd-nav">
-    <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
-        <li><a href="/">Home</a></li>
-        <li class="has-children">
-            <a href="">Academic</a>
-
-            <ul class="cd-secondary-nav is-hidden">
-                <li class="go-back"><a href="#0">Back</a></li>
-                <li class="has-children">
-                <li><a href="/schools">School</a></li>
-                <li><a href="/syllabus">Syllabus</a></li>
-                <li><a href="/academic_calendar">Academic Calendar</a></li>
-                <li><a href="/library">Library</a></li>
-
-                <ul class="is-hidden">
-                    <li class="go-back"><a href="#0">Clothing</a></li>
-                    <li><a href="/schools">School</a></li>
-                    <li><a href="/syllabus">Syllabus</a></li>
-                    <li><a href="/academic_calendar">Academic Calendar</a></li>
-                    <li><a href="/library">Library</a></li>
-                </ul>
-                </li>
-            </ul>
-        </li>
-
-        <li class="has-children">
-            <a href="">Authority</a>
-
-            <ul class="cd-secondary-nav is-hidden">
-                <li class="go-back"><a href="#0">Back</a></li>
-                <li class="has-children">
-                <li>
-                    <a href="/board_of_trustees">
-                        Board of Trustees
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Syndicate
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Academic Council
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Finance Committee
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Disciplinary Committee
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Office Of The Register
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Office Of The Proctor
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Office Of The Controller of Examination
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Office Of The Treasurer
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Office Of The Chairman
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Office Of The Vice Chancellor
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Office Of The Public Relation
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Library Office
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Departmental Officers
-                    </a>
-                </li>
-
-                <ul class="is-hidden">
-                    <li class="go-back"><a href="#0">Clothing</a></li>
-                    <li>
-                        <a href="/board_of_trustees">
-                            Board of Trustees
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Syndicate
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Academic Council
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Finance Committee
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Disciplinary Committee
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Office Of The Register
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Office Of The Proctor
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Office Of The Controller of Examination
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Office Of The Treasurer
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Office Of The Chairman
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Office Of The Vice Chancellor
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Office Of The Public Relation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Library Office
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Departmental Officers
-                        </a>
-                    </li>
-                </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="has-children">
-            <a href="">Departments</a>
-            <ul class="cd-secondary-nav is-hidden">
-                <li class="go-back"><a href="#0">Back</a></li>
-                <li class="has-children">
-                <li>
-                    <a href="/dept_of_cse">
-                        Computer Science and Engineering
-                    </a>
-                </li>
-                <li>
-                    <a href="/dept_of_csi">
-                        Computer Science and Informatics
-                    </a>
-                </li>
-                <li>
-                    <a href="/dept_of_ece">
-                        Electronics and Communication Engineering
-                    </a>
-                </li>
-                <li>
-                    <a href="/dept_of_eng">
-                        English
-                    </a>
-                </li>
-                <li>
-                    <a href="/dept_of_law">
-                        Law
-                    </a>
-                </li>
-                <li>
-                    <a href="/dept_of_bba">
-                        Business Administration
-                    </a>
-                </li>
-
-                <ul class="is-hidden">
-                    <li class="go-back"><a href="#0">Clothing</a></li>
-                    <li>
-                        <a href="/dept_of_cse">
-                            Computer Science and Engineering
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dept_of_csi">
-                            Computer Science and Informatics
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dept_of_ece">
-                            Electronics and Communication Engineering
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dept_of_eng">
-                            English
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dept_of_law">
-                            Law
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/dept_of_bba">
-                            Business Administration
-                        </a>
-                    </li>
-                </ul>
-                </li>
-            </ul>
-        </li>
-
-        <li class="has-children">
-            <a href="">Admision</a>
-
-            <ul class="cd-secondary-nav is-hidden">
-                <li class="go-back"><a href="#0">Back</a></li>
-                <li class="has-children">
-                <li>
-                    <a href="/tuition_fees">
-                        Tuition Fees
-                    </a>
-                </li>
-                <li>
-                    <a href="/waiver_information">
-                        Waiver Information
-                    </a>
-                </li>
-                <li>
-                    <a href="/graduate">
-                        Graduate
-                    </a>
-                </li>
-                <li>
-                    <a href="undergraduate">
-                        Undergraduate
-                    </a>
-                </li>
-                <li>
-                    <a href="/accommodation">
-                        Accommodation
-                    </a>
-                </li>
-
-                <ul class="is-hidden">
-                    <li class="go-back"><a href="#0">Clothing</a></li>
-                    <li>
-                        <a href="/tuition_fees">
-                            Tuition Fees
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/waiver_information">
-                            Waiver Information
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/graduate">
-                            Graduate
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/undergraduate">
-                            Undergraduate
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/accommodation">
-                            Accommodation
-                        </a>
-                    </li>
-                </ul>
-                </li>
-            </ul>
-        </li>
-        <li class="has-children">
-            <a href="">Resources</a>
-
-            <ul class="cd-secondary-nav is-hidden">
-                <li class="go-back"><a href="#0">Back</a></li>
-                <li class="has-children">
-                <li><a href="/single_lab">Software Lab</a></li>
-                <li><a href="/single_lab">Computer Lab</a></li>
-                <li><a href="/single_lab">Browsing Lab</a></li>
-                <li><a href="/single_lab">Electronics Lab</a></li>
-                <li><a href="/single_lab">Electronics Machine Lab</a></li>
-                <li><a href="">Moot Court Room</a></li>
-                <li><a href="">CRTC</a></li>
 
 
-                <ul class="is-hidden">
-                    <li><a href="/single_lab">Software Lab</a></li>
-                    <li><a href="/single_lab">Computer Lab</a></li>
-                    <li><a href="/single_lab">Browsing Lab</a></li>
-                    <li><a href="/single_lab">Electronics Lab</a></li>
-                    <li><a href="/single_lab">Electronics Machine Lab</a></li>
-                    <li><a href="">Moot Court Room</a></li>
-                    <li><a href="">CRTC</a></li>
-                </ul>
-                </li>
-            </ul>
-        </li>
+    <div class="container-fluid nav_background">
+        <div class="row">
+          <nav class="navbar navbar-default navbar-static navbar-expand-xl">
+            <div class="navbar-header">
+              
+            </div>
 
-        <li class="has-children">
-            <a href="">Societies</a>
+            <div class="collapse navbar-collapse js-navbar-collapse" id="my-navbar-collapse">
 
-            <ul class="cd-secondary-nav is-hidden">
-                <li class="go-back"><a href="#0">Back</a></li>
-                <li class="has-children">
-                <li>
-                    <a href="/cse_society">
-                        CSE Society
-                    </a>
+                
+              <ul class="nav navbar-nav">
+                <li class="dropdown dropdown-large">
+                  <a href="/">Home</a>
                 </li>
-                <li>
-                    <a href="">
-                        Alumni Association
-                    </a>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academic <b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row hover_before">
+                      <li><a href="{{route('academic.school')}}">School</a></li>
+                      <li><a href="{{route('academic.syllabus')}}">Syllabus</a></li>
+                      <li><a href="{{route('academic.calendar')}}">Academic Calendar</a></li>
+                      <li><a href="{{route('academic.library')}}">Library</a></li>
+                  </ul>
                 </li>
-                <li>
-                    <a href="">
-                        BNCC SIU Platoon
-                    </a>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Authority <b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row hover_before">
+                    <li><a href="{{route('authority.bot')}}">Board of Trustees</a></li>
+                    <li><a href="{{route('authority.bot')}}">Syndicate</a></li>
+                    <li><a href="{{route('authority.bot')}}">Academic Council</a></li>
+                    <li><a href="{{route('authority.bot')}}">Finance Committee</a></li>
+                    <li><a href="{{route('authority.bot')}}">Disciplinary Committee</a></li>
+                    <li><a href="{{route('authority.bot')}}">Office Of The Register</a></li>
+                    <li><a href="{{route('authority.bot')}}">Office Of The Proctor</a></li>
+                    <li><a href="{{route('authority.bot')}}">Office Of The Controller of Examination</a></li>
+                    <li><a href="{{route('authority.bot')}}">Office Of The Treasurer</a></li>
+                    <li><a href="{{route('authority.bot')}}">Office Of The Chairman</a></li>
+                    <li><a href="{{route('authority.bot')}}">Office Of The Vice Chancellor</a></li>
+                    <li><a href="{{route('authority.bot')}}">Office Of The Public Relation</a></li>
+                    <li><a href="{{route('authority.bot')}}">Library Office</a></li>
+                    <li><a href="{{route('authority.bot')}}">Departmental Officers</a></li>
+                  </ul>
                 </li>
-                <li>
-                    <a href="">
-                        Photography Society
-                    </a>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Departments<b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row hover_before">
+                      <li>
+                          <a href="{{route('dept.cse')}}">
+                              Computer Science and Engineering
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('dept.csi')}}">
+                              Computer Science and Informatics
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('dept.ece')}}">
+                              Electronics and Communication Engineering
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('dept.english')}}">
+                              English
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('dept.law')}}">
+                              Law
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('dept.bba')}}">
+                              Business Administration
+                          </a>
+                      </li>
+                  </ul>
                 </li>
-                <li>
-                    <a href="">
-                        Rotaract Club
-                    </a>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission <b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row hover_before">
+                      <li>
+                          <a href="{{route('admission.tuition_fees')}}">
+                              Tuition Fees
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('admission.waiver_information')}}">
+                              Waiver Information
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('admission.graduate')}}">
+                              Graduate
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('admission.undergraduate')}}">
+                              Undergraduate
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('admission.accommodation')}}">
+                              Accommodation
+                          </a>
+                      </li>
+                  </ul>
                 </li>
-                <li>
-                    <a href="">
-                        Debate Club
-                    </a>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row hover_before">
+                      <li><a href="{{route('software_lab')}}">Software Lab</a></li>
+                      <li><a href="">Computer Lab</a></li>
+                      <li><a href="">Browsing Lab</a></li>
+                      <li><a href="">Electronics Lab</a></li>
+                      <li><a href="">Electronics Machine Lab</a></li>
+                      <li><a href="">Moot Court Room</a></li>
+                      <li><a href="">CRTC</a></li>
+                  </ul>
                 </li>
-                <li>
-                    <a href="">
-                        Cultural Club
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Blood Donation Club
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        English Literary Club
-                    </a>
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Societies <b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row hover_before">
+                      <li>
+                          <a href="{{route('society.cse')}}">
+                              CSE Society
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{route('society.alumni')}}">
+                              Alumni Association
+                          </a>
+                      </li>
+                      <li>
+                          <a href="">
+                              BNCC SIU Platoon
+                          </a>
+                      </li>
+                      <li>
+                          <a href="">
+                              Photography Society
+                          </a>
+                      </li>
+                      <li>
+                          <a href="">
+                              Rotaract Club
+                          </a>
+                      </li>
+                      <li>
+                          <a href="">
+                              Debate Club
+                          </a>
+                      </li>
+                      <li>
+                          <a href="">
+                              Cultural Club
+                          </a>
+                      </li>
+                      <li>
+                          <a href="">
+                              Blood Donation Club
+                          </a>
+                      </li>
+                      <li>
+                          <a href="">
+                              English Literary Club
+                          </a>
+                      </li>
+                  </ul>
                 </li>
 
-                <ul class="is-hidden">
-                    <li class="go-back"><a href="#0">Clothing</a></li>
-                    <li>
-                        <a href="/cse_society">
-                            CSE Society
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Alumni Association
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            BNCC SIU Platoon
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Photography Society
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Rotaract Club
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Debate Club
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Cultural Club
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Blood Donation Club
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            English Literary Club
-                        </a>
-                    </li>
-                </ul>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="/g_suite">G-Suite</a>
-        </li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li class="has-children">
-            <a href="">Student Portal</a>
+                  <li><a href="/g_suite">G-Suite</a></li>
+                    <li><a href="{{route('gallery')}}">Gallery</a></li>
 
-            <ul class="cd-secondary-nav is-hidden">
-                <li class="go-back"><a href="#0">Back</a></li>
-                <li class="has-children">
-                    @if(!empty(Session::get('VNzLf4w8uRnXOy1SroBBuyYJpdVP8kA2mrzN4a')))
-                <li><a href="/studentProfile">Profile</a></li>
-                <li><a href="/studentLogout">Logout</a></li>
-                    @else
-                    <li><a href="/studentLogin">Login</a></li>
-                    @endif
-                <ul class="is-hidden">
-                    <li class="go-back"><a href="#0">Clothing</a></li>
-                        @if(!empty(Session::get('VNzLf4w8uRnXOy1SroBBuyYJpdVP8kA2mrzN4a')))
+                <li class="dropdown dropdown-large">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student Portal <b class="caret"></b></a>
+                  <ul class="dropdown-menu dropdown-menu-large row hover_before">
+                      @if(!empty(Session::get('VNzLf4w8uRnXOy1SroBBuyYJpdVP8kA2mrzN4a')))
+
+                          <li><a href="/studentProfile">Profile</a></li>
+                          <li><a href="/studentLogout">Logout</a></li>
+                      @else
+                          <li><a href="/studentLogin">Login</a></li>
+                      @endif
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- /.nav-collapse -->
+          </nav>
+      </div>
+    </div>
+
+
+
+
+
+        <div id="page">
+            <div class="mh-head second">
+                <div class="mh-head first Sticky">
+                    <span class="mh-btns-left">
+                        <a class="fa fa-bars" href="#menu"></a>
+                    </span>
+                </div>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Home </a></li>
+                    <li><span>Academic</span>
+                        <ul>
+                            <li><a href="{{route('academic.school')}}">School</a></li>
+                            <li><a href="{{route('academic.syllabus')}}">Syllabus</a></li>
+                            <li><a href="{{route('academic.calendar')}}">Academic Calendar</a></li>
+                            <li><a href="{{route('academic.library')}}">Library</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Authority</span>
+                        <ul>
+                            <li><a href="{{route('authority.bot')}}">Board of Trustees</a></li>
+                            <li><a href="{{route('authority.bot')}}">Syndicate</a></li>
+                            <li><a href="{{route('authority.bot')}}">Academic Council</a></li>
+                            <li><a href="{{route('authority.bot')}}">Finance Committee</a></li>
+                            <li><a href="{{route('authority.bot')}}">Disciplinary Committee</a></li>
+                            <li><a href="{{route('authority.bot')}}">Office Of The Register</a></li>
+                            <li><a href="{{route('authority.bot')}}">Office Of The Proctor</a></li>
+                            <li><a href="{{route('authority.bot')}}">Office Of The Controller of Examination</a></li>
+                            <li><a href="{{route('authority.bot')}}">Office Of The Treasurer</a></li>
+                            <li><a href="{{route('authority.bot')}}">Office Of The Chairman</a></li>
+                            <li><a href="{{route('authority.bot')}}">Office Of The Vice Chancellor</a></li>
+                            <li><a href="{{route('authority.bot')}}">Office Of The Public Relation</a></li>
+                            <li><a href="{{route('authority.bot')}}">Library Office</a></li>
+                            <li><a href="{{route('authority.bot')}}">Departmental Officers</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Departments</span>
+                        <ul>
+                            <li>
+                                <a href="{{route('dept.cse')}}">
+                                    Computer Science and Engineering
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('dept.csi')}}">
+                                    Computer Science and Informatics
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('dept.ece')}}">
+                                    Electronics and Communication Engineering
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('dept.english')}}">
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('dept.law')}}">
+                                    Law
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('dept.bba')}}">
+                                    Business Administration
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span>Admission</span>
+                        <ul>
+                            <li>
+                                <a href="{{route('admission.tuition_fees')}}">
+                                    Tuition Fees
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('admission.waiver_information')}}">
+                                    Waiver Information
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('admission.graduate')}}">
+                                    Graduate
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('admission.undergraduate')}}">
+                                    Undergraduate
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('admission.accommodation')}}">
+                                    Accommodation
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span>Resources</span>
+                        <ul>
+                            <li><a href="{{route('software_lab')}}">Software Lab</a></li>
+                            <li><a href="">Computer Lab</a></li>
+                            <li><a href="">Browsing Lab</a></li>
+                            <li><a href="">Electronics Lab</a></li>
+                            <li><a href="">Electronics Machine Lab</a></li>
+                            <li><a href="">Moot Court Room</a></li>
+                            <li><a href="">CRTC</a></li>
+                        </ul>
+                    </li>
+                    <li><span>Societies</span>
+                        <ul>
+                            <li>
+                                <a href="{{route('society.cse')}}">
+                                    CSE Society
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('society.alumni')}}">
+                                    Alumni Association
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    BNCC SIU Platoon
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Photography Society
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Rotaract Club
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Debate Club
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Cultural Club
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Blood Donation Club
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    English Literary Club
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/g_suite">G-Suite</a></li>
+                    <li><a href="{{route('gallery')}}">Gallery</a></li>
+                    <li><span>Student Portal</span>
+                        <ul>
                         
-                <li><a href="/studentProfile">Profile</a></li>
-                <li><a href="/studentLogout">Logout</a></li>
+            
+                     @if(!empty(Session::get('VNzLf4w8uRnXOy1SroBBuyYJpdVP8kA2mrzN4a')))
+                        
+	                <li><a href="/studentProfile">Profile</a></li>
+	                <li><a href="/studentLogout">Logout</a></li>
                     @else
                     <li><a href="/studentLogin">Login</a></li>
                     @endif
                 </ul>
                 </li>
-            </ul>
-        </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-    </ul> <!-- primary-nav -->
-</nav> <!-- cd-nav -->
 
-<div id="cd-search" class="cd-search">
-    <form>
-        <input type="search" placeholder="Search...">
-    </form>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- navbar started end-->
+
+
 <!-- =========NAV SECTION END=========== -->
 
 
@@ -633,20 +592,17 @@
         <i class="fas fa-times"></i>
     </a>
     <label for="select_pro">I'm looking for:</label>
-    <form action="">
-        <select data-trigger="" name="choices-single-defaul">
+    <div>
+        <select data-trigger="" name="lookingfor" id="lookingfor">
             <option value="Chose from list" >Chose from list</option>
             <option value="Graduate">Graduate</option>
             <option value="Undergraduate" >Undergraduate</option>
         </select>
-        <label for="select_pro">Find your Program:</label>
-        <select data-trigger="" name="choices-single-defaul" class="choices-single-defaul">
-            <option value="AL">Computer Sceince And Enginnering</option>
-            <option value="AL">Electrical And Electronics Enginnering</option>
-            <option value="AL">Department of Law</option>
-        </select>
-        <button type="submit" class="btn btn-info btn_ctrl">Search</button>
-    </form>
+        <div class="after_select">
+
+        </div>
+
+    </div>
 </div>
 
 

@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-<title>@yield('pageTitle') SIU | Department</title>
+<title>@yield('pageTitle') SIU | Department Of English</title>
 
 
 @section('content')
@@ -111,6 +111,15 @@
                                             </div>
                                         </a>
                                     </li>
+
+                                    <li id="scholarship-li" class="even">
+                                        <a data-scroll href="#tuition_fee">
+                                            <i class="fas fa-file-invoice-dollar"></i>
+                                            <div>
+                                                <h6>Tuition Fee</h6>
+                                            </div>
+                                        </a>
+                                    </li>
                                     <li id="scholarship-li" class="even">
                                         <a href="/alumni">
                                             <i class="fas fa-chalkboard-teacher"></i>
@@ -119,15 +128,6 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li id="scholarship-li" class="even">
-                                        <a data-scroll href="#tuition_fee">
-                                            <i class="fas fa-file-invoice-dollar"></i>
-                                            <div>
-                                                <h6>Tution Fee</h6>
-                                            </div>
-                                        </a>
-                                    </li>
-
                                 </ul>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-md-6">
@@ -389,37 +389,164 @@
                 </section>
 
                 {{--tution fee table--}}
-                <section id="tuition_fee">
+                <section class="curriculam_area" id="tuition_fee">
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="section_heading text-center">
-                                <h1><span class="first_sp"></span>Tuition Fee<span class="second_sp"></span></h1>
+                                <h1><span class="first_sp"></span>Fees<span class="second_sp"></span></h1>
                             </div>
                         </div>
                     </div>
-                    <table class="table-fill">
-                        <tbody class="table-hover">
-                        <tr>
-                            <td class="text-left">Registration</td>
-                            <td class="text-left">14,000 TK</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left">Tuition</td>
-                            <td class="text-left">16,000 TK</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left">Total in Semester</td>
-                            <td class="text-left">30,000 TK</td>
-                        </tr>
-                        <tr>
-                            <td class="text-left">Total To Complete Course</td>
-                            <td class="text-left">240,000 TK</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="curriculam_section">
+                                <ul>
+                                    <li>
+                                        <a href="#" id="collapse" class="collapse">
+                                            <span class="list_title"> Programmes Fees Structure</span>
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <div class="sroll_bar_t collapse_box" id="collapse_box" >
+                                            <table class="tbl">
+                                                <tbody>
+                                                <tr >
+                                                    <td width="400" style="text-align: center;"><b>Registration x 8 Semester</b></td>
+                                                    <td width="500px" style="text-align: center;"><b>Semester Fees x 8 Semester</b></td>
+                                                    <td style="text-align: center;">Total Fees</td>
+                                                </tr>
+                                                <tr class="tr_head" >
+                                                    <td style="text-align: center;">14,000 x 8 = 1,12,000 BDT</td>
+                                                    <td style="text-align: center;">8,000 x 8 = 64,000 BDT</td>
+                                                    <td style="text-align: center;">1,76,000 BDT</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="collapse2" class="collapse">
+                                            <span class="list_title"> Tution Fees Waiver</span>
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <div class="sroll_bar_t collapse_box" id="collapse_box2">
+                                            <table class="tbl">
+                                                <tbody>
+                                                <tr>
+                                                    <td width="500" style="text-align: center;"><b>Waiver</b></td>
+                                                    <td width="200" style="text-align: center;"><b>Rate</b></td>
+                                                    <td width="100" style="text-align: center;"><b> Applicable For</b></td>
+                                                    <td width="300" style="text-align: center;"><b>Registration x 8 Semester</b></td>
+                                                    <td width="300" style="text-align: center;"><b>Tuition Fee x 8 Semester</b></td>
+                                                    <td width="200" style="text-align: center;"><b>Total Fees</b></td>
+                                                </tr>
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Childreen of Freedom Fighters</td>
+                                                    <td style="text-align: center;">100%</td>
+                                                    <td style="text-align: center;">All</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">0 BDT</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">GPA 5.0 in both SSC and HSC	</td>
+                                                    <td style="text-align: center;">100%</td>
+                                                    <td style="text-align: center;">All</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">0 BDT</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Sum of GPA in SSC and HSC 9	</td>
+                                                    <td style="text-align: center;">50%</td>
+                                                    <td style="text-align: center;">Male</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">64,000 BDT</td>
+                                                    <td style="text-align: center;">1,76,000 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Sum of GPA in SSC and HSC 9</td>
+                                                    <td style="text-align: center;">60%</td>
+                                                    <td style="text-align: center;">Female</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">51,200 BDT</td>
+                                                    <td style="text-align: center;">1,63,200 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Sum of GPA in SSC and HSC 8</td>
+                                                    <td style="text-align: center;">10%</td>
+                                                    <td style="text-align: center;">male</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">1,15,200 BDT</td>
+                                                    <td style="text-align: center;">2,27,200 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Sum of GPA in SSC and HSC 8</td>
+                                                    <td style="text-align: center;">20%</td>
+                                                    <td style="text-align: center;">Female</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">1,02,400 BDT</td>
+                                                    <td style="text-align: center;">2,14,400 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Scored >=3.75 in both semesters of a year</td>
+                                                    <td style="text-align: center;">25%</td>
+                                                    <td style="text-align: center;">All</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">96,000 BDT</td>
+                                                    <td style="text-align: center;">2,08,000 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Physically Disable Students	</td>
+                                                    <td style="text-align: center;">50%</td>
+                                                    <td style="text-align: center;">All</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">64,000 BDT</td>
+                                                    <td style="text-align: center;">1,76,000 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Tribal Students</td>
+                                                    <td style="text-align: center;">25%</td>
+                                                    <td style="text-align: center;">All</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">96,000 BDT</td>
+                                                    <td style="text-align: center;">2,08,000 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">A Couple (Husband/Wife)</td>
+                                                    <td style="text-align: center;">25%</td>
+                                                    <td style="text-align: center;">All</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">96,000 BDT</td>
+                                                    <td style="text-align: center;">2,08,000 BDT</td>
+                                                </tr>
+
+                                                <tr class="tr_head">
+                                                    <td style="text-align: center;">Siblings</td>
+                                                    <td style="text-align: center;">50%</td>
+                                                    <td style="text-align: center;">All</td>
+                                                    <td style="text-align: center;">1,12,000 BDT</td>
+                                                    <td style="text-align: center;">64,000 BDT</td>
+                                                    <td style="text-align: center;">1,76,000 BDT</td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-
-
                 {{--tution fee table--}}
                 <section class="curriculam_area" id="syllabus">
                     <div class="row">

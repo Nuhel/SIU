@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-
+<title>@yield('pageTitle') SIU | Tuition fee</title>
 @push('css')
 
 @endpush

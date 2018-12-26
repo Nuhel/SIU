@@ -24,7 +24,7 @@
                                     <p>SIU University offers G Suite for Education (formerly Google Apps for Education) to all faculty members, students, staff and alumni. G Suite for Education includes web-based messaging and collaboration tools that offer enhanced emailing, calendaring, and collaboration tools through Gmail, Google Calendar, Google Drive and other Google applications. </p>
                                 </div>
                             </div>
-                            <div class="icon_link_box text-center">
+                            <div class="icon_link_box text-center" style="">
                                 <div class="col-md-4">
                                     <div class="single_i_box">
                                         <div class="i_img">

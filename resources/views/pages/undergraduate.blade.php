@@ -1,5 +1,6 @@
 @extends('layout.app')
 
+<title>@yield('pageTitle') SIU | Undergraduate</title>
 
 @push('css')
 

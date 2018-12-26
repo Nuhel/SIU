@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-<title>@yield('pageTitle') Academic Calendar</title>
+<title>@yield('pageTitle') SIU | Academic Calendar</title>
 
 
 @push('css')

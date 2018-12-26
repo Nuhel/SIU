@@ -15,35 +15,68 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('dashboard/forms', function () {
-
-    return view('dashboard.forms');
-});
 
 Route::get('/secondHome', function () {
-   
+
     return view('index_1');
 });
 
 
-Route::get('/dept_of_cse', function () {
-    return view('pages.dept_of_cse');
-});
-Route::get('/dept_of_csi', function () {
-    return view('pages.dept_of_csi');
-});
-Route::get('/dept_of_eng', function () {
-    return view('pages.dept_of_eng');
-});
-Route::get('/dept_of_bba', function () {
-    return view('pages.dept_of_bba');
-});
-Route::get('/dept_of_law', function () {
-    return view('pages.dept_of_law');
-});
-Route::get('/dept_of_ece', function () {
-    return view('pages.dept_of_ece');
-});
+//   Department
+Route::get('/','HomeController@index')->name('home.index');
+Route::get('/department/computer-science-and-engineering','DepartmentController@computer_science_and_engineering')->name('dept.cse');
+Route::get('/department/computer-science-and-informatics','DepartmentController@computer_science_and_informatics')->name('dept.csi');
+Route::get('/department/english','DepartmentController@english')->name('dept.english');
+Route::get('/department/business-administration','DepartmentController@business_administration')->name('dept.bba');
+Route::get('/department/law','DepartmentController@law')->name('dept.law');
+Route::get('/department/electronics-and-communication-engineering','DepartmentController@electronics_and_communication_engineering')->name('dept.ece');
+
+//   Authority
+Route::get('/authority/board-of-trustees','AuthoritiesController@board_of_trustees')->name('authority.bot');
+
+//    Academic
+
+Route::get('/academic/school','AcademicController@school')->name('academic.school');
+Route::get('/academic/academic-calendar','AcademicController@academic_calendar')->name('academic.calendar');
+Route::get('/academic/library','AcademicController@library')->name('academic.library');
+Route::get('/academic/syllabus','AcademicController@syllabus')->name('academic.syllabus');
+
+//     Admission
+Route::get('/admission/tuition-fees','AdmisionController@tuition_fee')->name('admission.tuition_fees');
+Route::get('/admission/waiver-information','AdmisionController@waiver_information')->name('admission.waiver_information');
+Route::get('/admission/graduate','AdmisionController@graduate')->name('admission.graduate');
+Route::get('/admission/undergraduate','AdmisionController@undergraduate')->name('admission.undergraduate');
+Route::get('/admission/accommodation','AdmisionController@accommodation')->name('admission.accommodation');
+
+//  Resources
+Route::get('/software-lab','ResourcesController@software_lab')->name('software_lab');
+
+//  Society
+
+Route::get('/society/cse-society','SocietiesController@cse_society')->name('society.cse');
+Route::get('/alumni-association','SocietiesController@alumni')->name('society.alumni');
+
+
+//    Gallery
+
+Route::get('/gallery','GalleriesController@gallery')->name('gallery');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route::get('/search_result_page', function () {
@@ -52,11 +85,6 @@ Route::get('/search_result_page', function () {
 Route::get('/student_profile', function () {
     return view('pages.student_profile');
 });
-
-Route::get('/academic_calendar', function () {
-    return view('pages.academic_calendar');
-});
-
 
 Route::get('/single_event', function () {
     return view('pages.single_event');
@@ -70,7 +98,6 @@ Route::get('/all_events', function () {
     return view('pages.all_events');
 });
 
-
 Route::get('/curriculam', function () {
     return view('pages.curriculam');
 });
@@ -79,42 +106,18 @@ Route::get('/single_teachers', function () {
     return view('pages.single_teachers');
 });
 
-Route::get('/tuition_fees', function () {
-    return view('pages.tuition_fees');
-});
-Route::get('/waiver_information', function () {
-    return view('pages.waiver_information');
-});
 
-Route::get('/undergraduate', function () {
-    return view('pages.undergraduate');
-});
 
-Route::get('/graduate', function () {
-    return view('pages.graduate');
-});
-Route::get('/accommodation', function () {
-    return view('pages.accommodation');
-});
-Route::get('/library', function () {
-    return view('pages.library');
-});
 
-Route::get('/cse_society', function () {
-    return view('pages.cse_society');
-});
-Route::get('/alumni', function () {
-    return view('pages.alumni');
-});
+
+
 Route::get('/single_notice', function () {
     return view('pages.single_notice');
 });
 Route::get('/all_notice', function () {
     return view('pages.all_notice');
 });
-Route::get('/single_lab', function () {
-    return view('pages.single_lab');
-});
+
 Route::get('/teachers_profile', function () {
     return view('pages.teachers_profile');
 });
@@ -128,25 +131,11 @@ Route::get('/g_suite', function () {
 
 
 
-Route::get('/syllabus', function () {
-
-    return view('pages.syllabus');
-});
-Route::get('/gallery', function () {
-
-    return view('pages.gallery');
-});
-
 Route::get('/gallery_single', function () {
 
     return view('pages.gallery_single');
 });
 
-
-Route::get('/board_of_trustees', function () {
-
-    return view('pages.board_of_trustees');
-});
 Route::get('/chairman', function () {
 
     return view('pages.chairman');
@@ -162,15 +151,12 @@ Route::get('/vc', function () {
     return view('pages.vc');
 });
 
-
 Route::get('/at_a_glance', function () {
 
     return view('pages.at_a_glance');
 });
-Route::get('/schools', function () {
 
-    return view('pages.schools');
-});
+
 
 
 

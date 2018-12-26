@@ -53,28 +53,71 @@
 
     <div class="main slider_main_raised cst_main_rsd lab_raised">
         <div class="container">
-            <div class="card mr_b_50 mr_t_50">
-                <div class="custom_card_syllabus">
-                    <div class="inner_main">
-                        <div class="card_head_line">
-                            <h4><spane>Electronics lab</spane></h4>
+
+
+
+            <div id="main_overview">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-3 col-md-3 padd_left_z">
+                            <ul class="tab-nav cust_tab_nab">
+                                <li id="overview-li" class="active odd first-child">
+                                    <a href="#overview" data-toggle="tab">
+                                        <i class="fas fa-volleyball-ball"></i>
+                                        <div>
+                                            <h6>Overview</h6>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li id="research-li" class="even">
+                                    <a href="#equipments" data-toggle="tab">
+                                        <i class="fas fa-cog"></i>
+                                        <div>
+                                            <h6>Equipments</h6>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li id="research-li" class="even">
+                                    <a data-scroll href="#lab_staff">
+                                        <i class="fas fa-file-alt"></i>
+                                        <div>
+                                            <h6>Lab Staff</h6>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </div>
-                        <div class="section_head">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="chairman_text" style="margin-top: 30px">
-                                        <p>The Electronics lab is enriched with latest equipment that helps the students gain practical knowledge and experience in the fields of Analog and Digital Circuit Design, Instrumentation and Control, Embedded Systems,
-                                            VLSI Design, Microwave Technology, Digital Signal Processing, Digital Electronics and Microprocessors.
-                                        </p>
-                                    </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+
+                            <div id="home-tab-content" class="tab-content custom_tab_content">
+                                <div class="tab-pane  active" id="overview">
+                                    <h4>Electronics Lab</h4>
+                                    <p>The Electronics lab is enriched with latest equipment that helps the students gain practical knowledge and experience in the fields of Analog and Digital Circuit Design, Instrumentation and Control,
+                                        Embedded Systems, VLSI Design, Microwave Technology, Digital Signal Processing, Digital Electronics and Microprocessors
+                                    </p>
                                 </div>
+                                <div class="tab-pane " id="equipments">
+                                    <h4>Equipments</h4>
+                                    <li>Providing an excellent </li>
+                                    <li>Providing professionally </li>
+                                    <li>Providing financial grants </li>
+                                    <li>Imparting education with ethic</li>
+                                    <li>Stimulating the search for knowledge</li>
+                                    <li>Encouraging inquiry and conversation a</li>
+                                    <li>Promoting opportunity for students</li>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                <span id="bg-tab"></span>
             </div>
 
-            <div class="container">
+
+
+            <div class="container" id="lab_staff">
                 <div class="card_head_line">
                     <h4><span>Lab Satff</span></h4>
                 </div>
@@ -88,8 +131,6 @@
                                     <div class="teachers_social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                         </ul>
                                         <div class="personal_info">
@@ -114,8 +155,6 @@
                                     <div class="teachers_social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                         </ul>
                                         <div class="personal_info">
@@ -140,8 +179,6 @@
                                     <div class="teachers_social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                         </ul>
                                         <div class="personal_info">
@@ -166,8 +203,6 @@
                                     <div class="teachers_social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                         </ul>
                                         <div class="personal_info">
@@ -192,8 +227,6 @@
                                     <div class="teachers_social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                         </ul>
                                         <div class="personal_info">
@@ -218,8 +251,6 @@
                                     <div class="teachers_social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                         </ul>
                                         <div class="personal_info">
@@ -267,5 +298,19 @@
             });
         });
     </script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            function scrollToSection(event) {
+                event.preventDefault();
+                var $section = $($(this).attr('href'));
+                $('html, body').animate({
+                    scrollTop: $section.offset().top
+                }, 500);
+            }
+            $('[data-scroll]').on('click', scrollToSection);
+        }(jQuery));
+    </script>
+
 
 @endpush

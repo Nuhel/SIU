@@ -53,29 +53,77 @@
                 </section>
 
 
-        <div class="container">
-            <div class="card mr_b_50 mr_t_50">
-                <div class="custom_card_syllabus">
-                    <div class="inner_main">
-                        <div class="card_head_line">
-                            <h4><spane></spane>CSE Society</h4>
-                        </div>
-                        <div class="section_head">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="chairman_text" style="margin-top: 30px">
-                                        <p>CSE Society is the largest students’ organization of Sylhet International University(SIU).
-                                            This is the students’ organization of Computer Science & Engineering students of this university..</p>
+<div class="main slider_main_raised cst_main_rsd lab_raised">
+    <div class="container">
+        <div id="main_overview">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3 padd_left_z">
+                        <ul class="tab-nav cust_tab_nab">
+                            <li id="overview-li" class="active odd first-child">
+                                <a href="#overview" data-toggle="tab">
+                                    <i class="fas fa-volleyball-ball"></i>
+                                    <div>
+                                        <h6>Overview</h6>
                                     </div>
-                                </div>
+                                </a>
+                            </li>
+                            <li id="research-li" class="even">
+                                <a href="#mission" data-toggle="tab">
+                                    <i class="fas fa-globe"></i>
+                                    <div>
+                                        <h6>Mission</h6>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="research-li" class="even">
+                                <a href="#vision" data-toggle="tab">
+                                    <i class="fas fa-eye"></i>
+                                    <div>
+                                        <h6>Vision</h6>
+                                    </div>
+                                </a>
+                            </li>
+                            <li id="research-li" class="even">
+                                <a data-scroll href="#faculty_member">
+                                    <i class="fas fa-file-alt"></i>
+                                    <div>
+                                        <h6>Members</h6>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+
+                        <div id="home-tab-content" class="tab-content custom_tab_content">
+                            <div class="tab-pane  active" id="overview">
+                                <h4>CSE Society</h4>
+                                <p>CSE Society is the largest students’ organization of Sylhet International University(SIU).
+                                    This is the students’ organization of Computer Science & Engineering students of this university
+                                </p>
                             </div>
+                            <div class="tab-pane " id="mission">
+                                <h4>Mission</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                            </div>
+                            <div class="tab-pane " id="vision">
+                                <h4>Vision</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <span id="bg-tab"></span>
         </div>
-
-
+    </div>
     <div class="container" id="faculty_member">
         <div class="card_head_line">
             <h4><span>Members</span></h4>
@@ -90,8 +138,6 @@
                             <div class="teachers_social">
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                                 <div class="personal_info">
@@ -116,8 +162,6 @@
                             <div class="teachers_social">
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                                 <div class="personal_info">
@@ -142,8 +186,6 @@
                             <div class="teachers_social">
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                                 <div class="personal_info">
@@ -168,8 +210,6 @@
                             <div class="teachers_social">
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                                 <div class="personal_info">
@@ -194,8 +234,6 @@
                             <div class="teachers_social">
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                                 <div class="personal_info">
@@ -220,8 +258,6 @@
                             <div class="teachers_social">
                                 <ul>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                     <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                                 <div class="personal_info">
@@ -243,6 +279,7 @@
             <a class="next" style="cursor: pointer"><i class="fas fa-chevron-circle-right"></i></a>
         </div>
     </div>
+</div>
 
 
 </div>
@@ -267,6 +304,18 @@
                 owl.trigger('owl.stop');
             });
         });
+    </script>
+    <script>
+        jQuery(document).ready(function ($) {
+            function scrollToSection(event) {
+                event.preventDefault();
+                var $section = $($(this).attr('href'));
+                $('html, body').animate({
+                    scrollTop: $section.offset().top
+                }, 500);
+            }
+            $('[data-scroll]').on('click', scrollToSection);
+        }(jQuery));
     </script>
 
 @endpush

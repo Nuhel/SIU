@@ -152,6 +152,9 @@ font-family: 'Playfair Display', serif;
 	-ms-border-radius:0 !important;
 	-o-border-radius:0 !important;
 }
+.navbar-nav {
+	float: none !important;
+}
 .navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover, .navbar.navbar-default .dropdown-menu li > a:focus {
 	color: #FFFFFF;
 	background-color: #007C92 !important;
@@ -526,12 +529,11 @@ address.right_address{
 	border-radius: 0px;
 }
 .nav {
-	margin-bottom: 27px !important;
 	display: table;
 	margin: 0 auto;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	margin-top: 15px;
+
 }
 
 
@@ -3864,7 +3866,7 @@ input.fontAwesome {
 	border: none;
 	font-size: 16px;
 	color: #888888;
-	margin-left: 15px;
+	margin-left: 10px;
 }
 .select_cls{
 	display: table;
@@ -4455,7 +4457,7 @@ legend {
     background-color: #ededed;
 }
 .curriculam_section > ul > li > a:hover{
-	background-color: #00A0B6;
+	background-color: #00a0b67d;
 	color: #fff;
 }
 
@@ -4574,7 +4576,7 @@ legend {
 	margin-top: 15px;
 }
 .from_program_div select {
-	width: 100%;
+	width: 98%;
 	height: 40px;
 	border: 1px solid #ddd;
 	font-size: 17px;
@@ -4901,7 +4903,7 @@ ul.jump_to_dropdown li a {
 
 #main_overview{position: relative;display:block;padding: 0px 0px 40px;background: #F1F7F9;margin-bottom: 15px;margin-top: 15px;}
 #main_overview .container{ position: relative; z-index: 1; }
-#main_overview #bg-tab{position: absolute; display:block; content: ""; height: 100%; width: 50%; top: -15px; left: 50%; background: url(/siu/img/forig_camp.jpg) left center no-repeat;
+#main_overview #bg-tab{position: absolute; display:block; content: ""; height: 100%; width: 50%; top: 0px; left: 50%; background: url(/siu/img/graduate.jpg) left center no-repeat;
 	-webkit-transition: all .5s ease-in;
 	-moz-transition:all .5s ease-in;
 	-o-transition:all .5s ease-in;
@@ -5539,7 +5541,7 @@ li.cst_nav_item.active:after {
     padding: 20px;
 }
 .collapse_bg_on_click{
-	background-color: #009FB5 !important;
+
 	color: #fff !important;
 }
 
@@ -5750,9 +5752,64 @@ td:last-child {
 th.text-left {
 	text-align: left;
 }
-
-
-
 td.text-left {
 	text-align: left;
+}
+.event_card_container{
+	transition: all 0.2s ease-in-out;
+}
+.event_card_container:hover{
+	box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.24);
+}
+#research{
+	width: 700px;
+}
+#research li{
+	list-style: none !important;
+	padding: 5px;
+}
+#research li i{
+	color: #00a0b6;
+}
+
+/*==========================nav==================*/
+
+
+/*Hover Css For Navbar*/
+.navbar-default .navbar-nav > li.dropdown:hover > a,
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+	background-color: rgb(22, 150, 169);
+	color: rgb(255, 255, 255);
+}
+li.dropdown:hover > .dropdown-menu {
+	display: block;
+}
+
+.hover_before li{
+	position: relative;
+	z-index: 1;
+	overflow:hidden;
+}
+.hover_before li:before{
+	position: absolute;
+	content: "";
+	right: 100%;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.2);
+	z-index: -1;
+	transition: .5s;
+}
+.hover_before li:hover:before{
+	right: 0;
+}
+.dropdown-menu li > a {
+	 margin: 0 !important;
+}
+
+.navbar .navbar-nav > li > a {
+
+	border-radius: 0 !important;
 }

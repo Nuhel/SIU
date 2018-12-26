@@ -247,7 +247,7 @@
 
 
 <!--   Core JS Files   -->
-<script src="{{asset('siu/js/jquery-3.3.1.js')}}"></script>
+
 <script src="{{asset('siu/js/bootstrap.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('siu/js/material.min.js')}}"></script>
 <script src="{{asset('siu/js/jquery.magnific-popup.min.js')}}"></script>
@@ -258,37 +258,6 @@
 <script src="{{asset('siu/js/jquery.selectric.min.js')}}"></script>
 <script src="{{asset('siu/js/sweetalert.js')}}"></script>
 @stack('js')
-
- @if(!empty(Session::get('logedInStudent'))) 
-          <script>
-              swal({
-                  title: "You Are Now Loged In!",
-                  text: "You can now view your profile!",
-                  icon: "success",
-                  button: "Ok!",
-              });
-          </script>
-        @php
-
-        Session::forget('logedInStudent') 
-        @endphp
-        @endif
-       @if(!empty(Session::get('logedOutStudent')))
-          <script>
-              swal({
-                  title: "OOps You Are Loged Out!",
-                  text: "You can't view your profile!",
-                  icon: "warning",
-                  button: "Ok!",
-              });
-          </script>
-        @php
-
-        Session::forget('logedOutStudent') 
-        @endphp
-      @endif
-
-       
 
 
 
@@ -347,7 +316,7 @@
 
     $(document).ready(function(){
         $('.collapse').click(function(event){
-            event.preventDefault();
+
             $(this).parent('li').find('.collapse_box').slideToggle(300);
             $(this).parent('li').find('i').toggleClass('fas fa-minus fas fa-plus');
             $(this).toggleClass('collapse_bg_on_click');
@@ -489,5 +458,41 @@
         $( ".hide_next_prev_2").hide();
     });
 </script>
+
+
+
+
+<script>
+    $('#lookingfor').change(function(){
+        $(".after_select").empty();
+        var value = $(this).val();
+
+        if(value=='Graduate'){
+
+            $(".after_select").append(" <label for='select_pro'>Find your Program:</label> <select id='selectedCourse' data-trigger=' name='choices-single-defaul' class='choices-single-defaul'> <option value='AL'>MBA</option> <option value='AL'>LL.B</option> <option value='AL'>LL.M</option><option value='AL'>MA</option> </select> <button id='gobutton'  class='btn btn-info btn_ctrl'>Go</button>");
+        }
+        else if(value=='Undergraduate'){
+
+            $(".after_select").append(" <label for='select_pro'>Find your Program:</label> <select id='selectedCourse' data-trigger=' name='choices-single-defaul' class='choices-single-defaul'> <option value='/dept_of_cse'>Computer Sceince And Enginnering</option> <option value='AL'>Electrical And Electronics Enginnering</option><option value='AL'>Computer Sceince And Informatics</option> <option value='AL'>Department of Law</option><option value='AL'>Department of BBA</option><option value='AL'>Department of English</option> </select> <button id='gobutton' class='btn btn-info btn_ctrl'>Go</button>");
+        }
+
+        else{
+            $(".after_select").empty();
+        }
+    });
+
+    $(document).on('click', '#gobutton', function() {
+        var url=$("#selectedCourse").val();
+        console.log(url);
+        window.location.href = 'http://siu'+url;
+        })
+
+
+</script>
+
+
+
+
+
 
 </html>

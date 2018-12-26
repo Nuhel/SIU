@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-<title>@yield('pageTitle') SIU | Department</title>
+<title>@yield('pageTitle') SIU | Accommodation</title>
 
 
 @section('content')
@@ -87,8 +87,6 @@
                                                     <div class="teachers_social">
                                                         <ul>
                                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                                         </ul>
                                                         <div class="personal_info">
@@ -113,8 +111,6 @@
                                                     <div class="teachers_social">
                                                         <ul>
                                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                                         </ul>
                                                         <div class="personal_info">
@@ -139,8 +135,6 @@
                                                     <div class="teachers_social">
                                                         <ul>
                                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                                         </ul>
                                                         <div class="personal_info">
@@ -165,8 +159,6 @@
                                                     <div class="teachers_social">
                                                         <ul>
                                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                                         </ul>
                                                         <div class="personal_info">
@@ -191,8 +183,6 @@
                                                     <div class="teachers_social">
                                                         <ul>
                                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                                         </ul>
                                                         <div class="personal_info">
@@ -217,8 +207,6 @@
                                                     <div class="teachers_social">
                                                         <ul>
                                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                                             <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                                         </ul>
                                                         <div class="personal_info">

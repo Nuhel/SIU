@@ -1,5 +1,6 @@
 @extends('layout.app')
 
+<title>@yield('pageTitle') SIU | Waiver Information</title>
 
 @push('css')
 

@@ -1989,7 +1989,12 @@
 }
 
 
-
+@media (min-width: 1170px){
+    #page {
+        display: none;
+    }
+}
+page
 
 
 

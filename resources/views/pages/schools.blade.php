@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-<title>@yield('pageTitle') Schools</title>
+<title>@yield('pageTitle') SIU | Schools</title>
 
 @push('css')
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"

@@ -17,5 +17,5 @@ class SubjectModel extends Model
     
         // add all other fields
     ];
-    protected $table = 'Subjects';
+    protected $table = 'subjects';
 }
